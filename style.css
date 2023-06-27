@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+body{
+    background-color: #000;
+}
+/* Página padrão */
+.container{
+    flex-direction: column;
+    background:linear-gradient(rgb(1, 1, 57) , rgb(2, 2, 3)90%);
+    display: flex;
+    max-width: 1199px;
+    min-width: 300px;
+    margin: 0 auto;
+    font-family: 'Caprasimo', cursive;
+}
+.container #name_website{
+    color: #fff;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    padding: 1em;
+}
+main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+main .container_films{
+    color: #fff;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.container_films .poster{
+    max-width: 280px;
+    min-width: 200px;
+    height: 300px;
+    text-align: left;
+    margin: .8em .8em;
+    padding: .7em;
+}
+.container_films .poster .img_poster{
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    transition: .5s;
+}
+.container_films .poster .img_poster:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.container_films .poster>.title{
+   display: none;
+}
+
+/* PÁGINA DE INFORMAÇÕES */
+
+.container_films .info_film{
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    width: 95%;
+    height: 75vh;
+    margin: 0 auto;
+    display: flex;
+}
+.container_films .info_film #close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+}
+
+#date{
+    letter-spacing: 1px;
+}
+.poster_info{
+    width: 188px;
+}
+#division_1{
+    padding: .1em 1.5em;
+}
+#division_1>#overview{
+    padding: 1em 0;
+}
+
+@media (max-width:600px){
+    .info_film{
+        flex-direction: column;
+    }
+    #division_1{
+        padding: 1.2em .1em;
+     }
+}
